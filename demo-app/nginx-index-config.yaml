@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-index-config
+  namespace: demo-app
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Nginx</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+        <style>
+            body {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+            .container {
+                max-width: 800px;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            }
+        </style>
+    </head>
+    <body class="flex items-center justify-center min-h-screen text-white">
+        <div class="container bg-white bg-opacity-20 rounded-xl p-10 text-center backdrop-filter backdrop-blur-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 mx-auto mb-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+            </svg>
+            <h1 class="text-4xl font-bold mb-4">Nginx is Running</h1>
+            <p class="text-xl mb-8">Your web server is up and ready to serve!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2">Configuration</h3>
+                    <p class="text-sm">Check /etc/nginx/nginx.conf</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2">Logs</h3>
+                    <p class="text-sm">/var/log/nginx/access.log</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <h3 class="font-semibold mb-2">Version</h3>
+                    <p class="text-sm">nginx/1.x.x</p>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </body>
+    </html>
