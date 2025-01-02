@@ -1,2 +1,4 @@
 # k8s
-Kubernetes projects
+## Kubernetes Learning Repository 📘
+This repository serves to store yaml files on my way to learn kubernetes
+
