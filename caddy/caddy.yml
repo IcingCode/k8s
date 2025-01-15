@@ -1,11 +1,11 @@
+---
 apiVersion: v1
 kind: Pod
-metadata: 
+metadata:
   name: caddy-pod1
   labels:
     app: caddy-app1
 spec:
-containers:
-  - name: caddy-container
-    image: caddy
-
+  containers:
+    - name: caddy-container
+      image: caddy
